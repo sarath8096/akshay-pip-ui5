@@ -1,0 +1,1038 @@
+{
+    "Projects":  [
+                     {
+                         "ProjectID":  "PRJ-001",
+                         "Name":  "Website Redesign",
+                         "Description":  "Dummy description for Website Redesign.",
+                         "Status":  "Not Started",
+                         "StatusState":  "None",
+                         "Owner":  "Anita Sharma",
+                         "Priority":  "High",
+                         "StartDate":  "2026-01-01",
+                         "EndDate":  "2026-07-01",
+                         "Progress":  0,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Requirements gathering",
+                                           "Status":  "Open",
+                                           "Assignee":  "Anita Sharma"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-002",
+                         "Name":  "Mobile App Launch",
+                         "Description":  "Dummy description for Mobile App Launch.",
+                         "Status":  "In Progress",
+                         "StatusState":  "Warning",
+                         "Owner":  "Karan Mehta",
+                         "Priority":  "Medium",
+                         "StartDate":  "2026-02-01",
+                         "EndDate":  "2026-09-01",
+                         "Progress":  27,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Design phase",
+                                           "Status":  "Done",
+                                           "Assignee":  "Karan Mehta"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Development",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Deepak Rao"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-003",
+                         "Name":  "Data Migration",
+                         "Description":  "Dummy description for Data Migration.",
+                         "Status":  "At Risk",
+                         "StatusState":  "Error",
+                         "Owner":  "Deepak Rao",
+                         "Priority":  "Low",
+                         "StartDate":  "2026-03-01",
+                         "EndDate":  "2026-11-01",
+                         "Progress":  25,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Development",
+                                           "Status":  "Done",
+                                           "Assignee":  "Deepak Rao"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Testing",
+                                           "Status":  "Done",
+                                           "Assignee":  "Priya Nair"
+                                       },
+                                       {
+                                           "TaskID":  "T3",
+                                           "Title":  "UAT",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Rahul Verma"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-004",
+                         "Name":  "Customer Portal Upgrade",
+                         "Description":  "Dummy description for Customer Portal Upgrade.",
+                         "Status":  "Completed",
+                         "StatusState":  "Success",
+                         "Owner":  "Priya Nair",
+                         "Priority":  "High",
+                         "StartDate":  "2026-04-01",
+                         "EndDate":  "2026-10-01",
+                         "Progress":  100,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Testing",
+                                           "Status":  "Done",
+                                           "Assignee":  "Priya Nair"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-005",
+                         "Name":  "Internal HR System",
+                         "Description":  "Dummy description for Internal HR System.",
+                         "Status":  "Not Started",
+                         "StatusState":  "None",
+                         "Owner":  "Rahul Verma",
+                         "Priority":  "Medium",
+                         "StartDate":  "2026-05-01",
+                         "EndDate":  "2026-12-01",
+                         "Progress":  0,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "UAT",
+                                           "Status":  "Done",
+                                           "Assignee":  "Rahul Verma"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Deployment",
+                                           "Status":  "Open",
+                                           "Assignee":  "Sana Iqbal"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-006",
+                         "Name":  "Cloud Infrastructure Migration",
+                         "Description":  "Dummy description for Cloud Infrastructure Migration.",
+                         "Status":  "In Progress",
+                         "StatusState":  "Warning",
+                         "Owner":  "Sana Iqbal",
+                         "Priority":  "Low",
+                         "StartDate":  "2026-06-01",
+                         "EndDate":  "2027-02-01",
+                         "Progress":  55,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Deployment",
+                                           "Status":  "Done",
+                                           "Assignee":  "Sana Iqbal"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Documentation",
+                                           "Status":  "Done",
+                                           "Assignee":  "Meera Iyer"
+                                       },
+                                       {
+                                           "TaskID":  "T3",
+                                           "Title":  "Stakeholder review",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Vikram Singh"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-007",
+                         "Name":  "Payment Gateway Integration",
+                         "Description":  "Dummy description for Payment Gateway Integration.",
+                         "Status":  "At Risk",
+                         "StatusState":  "Error",
+                         "Owner":  "Meera Iyer",
+                         "Priority":  "High",
+                         "StartDate":  "2026-07-01",
+                         "EndDate":  "2027-01-01",
+                         "Progress":  45,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Documentation",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Meera Iyer"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-008",
+                         "Name":  "CRM Implementation",
+                         "Description":  "Dummy description for CRM Implementation.",
+                         "Status":  "Completed",
+                         "StatusState":  "Success",
+                         "Owner":  "Vikram Singh",
+                         "Priority":  "Medium",
+                         "StartDate":  "2026-08-01",
+                         "EndDate":  "2027-03-01",
+                         "Progress":  100,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Stakeholder review",
+                                           "Status":  "Done",
+                                           "Assignee":  "Vikram Singh"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Requirements gathering",
+                                           "Status":  "Done",
+                                           "Assignee":  "Neha Kapoor"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-009",
+                         "Name":  "Inventory Management System",
+                         "Description":  "Dummy description for Inventory Management System.",
+                         "Status":  "Not Started",
+                         "StatusState":  "None",
+                         "Owner":  "Neha Kapoor",
+                         "Priority":  "Low",
+                         "StartDate":  "2026-09-01",
+                         "EndDate":  "2027-05-01",
+                         "Progress":  0,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Requirements gathering",
+                                           "Status":  "Done",
+                                           "Assignee":  "Neha Kapoor"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Design phase",
+                                           "Status":  "Done",
+                                           "Assignee":  "Arjun Reddy"
+                                       },
+                                       {
+                                           "TaskID":  "T3",
+                                           "Title":  "Development",
+                                           "Status":  "Open",
+                                           "Assignee":  "Anita Sharma"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-010",
+                         "Name":  "Employee Onboarding Portal",
+                         "Description":  "Dummy description for Employee Onboarding Portal.",
+                         "Status":  "In Progress",
+                         "StatusState":  "Warning",
+                         "Owner":  "Arjun Reddy",
+                         "Priority":  "High",
+                         "StartDate":  "2026-10-01",
+                         "EndDate":  "2027-04-01",
+                         "Progress":  23,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Design phase",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Arjun Reddy"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-011",
+                         "Name":  "Marketing Automation Platform",
+                         "Description":  "Dummy description for Marketing Automation Platform.",
+                         "Status":  "At Risk",
+                         "StatusState":  "Error",
+                         "Owner":  "Anita Sharma",
+                         "Priority":  "Medium",
+                         "StartDate":  "2026-11-01",
+                         "EndDate":  "2027-06-01",
+                         "Progress":  15,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Development",
+                                           "Status":  "Done",
+                                           "Assignee":  "Anita Sharma"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Testing",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Karan Mehta"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-012",
+                         "Name":  "Business Intelligence Dashboard",
+                         "Description":  "Dummy description for Business Intelligence Dashboard.",
+                         "Status":  "Completed",
+                         "StatusState":  "Success",
+                         "Owner":  "Karan Mehta",
+                         "Priority":  "Low",
+                         "StartDate":  "2026-12-01",
+                         "EndDate":  "2027-08-01",
+                         "Progress":  100,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Testing",
+                                           "Status":  "Done",
+                                           "Assignee":  "Karan Mehta"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "UAT",
+                                           "Status":  "Done",
+                                           "Assignee":  "Deepak Rao"
+                                       },
+                                       {
+                                           "TaskID":  "T3",
+                                           "Title":  "Deployment",
+                                           "Status":  "Done",
+                                           "Assignee":  "Priya Nair"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-013",
+                         "Name":  "Supply Chain Optimization",
+                         "Description":  "Dummy description for Supply Chain Optimization.",
+                         "Status":  "Not Started",
+                         "StatusState":  "None",
+                         "Owner":  "Deepak Rao",
+                         "Priority":  "High",
+                         "StartDate":  "2026-01-01",
+                         "EndDate":  "2026-07-01",
+                         "Progress":  0,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "UAT",
+                                           "Status":  "Open",
+                                           "Assignee":  "Deepak Rao"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-014",
+                         "Name":  "E-Commerce Platform Revamp",
+                         "Description":  "Dummy description for E-Commerce Platform Revamp.",
+                         "Status":  "In Progress",
+                         "StatusState":  "Warning",
+                         "Owner":  "Priya Nair",
+                         "Priority":  "Medium",
+                         "StartDate":  "2026-02-01",
+                         "EndDate":  "2026-09-01",
+                         "Progress":  51,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Deployment",
+                                           "Status":  "Done",
+                                           "Assignee":  "Priya Nair"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Documentation",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Rahul Verma"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-015",
+                         "Name":  "Security Compliance Audit",
+                         "Description":  "Dummy description for Security Compliance Audit.",
+                         "Status":  "At Risk",
+                         "StatusState":  "Error",
+                         "Owner":  "Rahul Verma",
+                         "Priority":  "Low",
+                         "StartDate":  "2026-03-01",
+                         "EndDate":  "2026-11-01",
+                         "Progress":  35,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Documentation",
+                                           "Status":  "Done",
+                                           "Assignee":  "Rahul Verma"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Stakeholder review",
+                                           "Status":  "Done",
+                                           "Assignee":  "Sana Iqbal"
+                                       },
+                                       {
+                                           "TaskID":  "T3",
+                                           "Title":  "Requirements gathering",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Meera Iyer"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-016",
+                         "Name":  "API Gateway Modernization",
+                         "Description":  "Dummy description for API Gateway Modernization.",
+                         "Status":  "Completed",
+                         "StatusState":  "Success",
+                         "Owner":  "Sana Iqbal",
+                         "Priority":  "High",
+                         "StartDate":  "2026-04-01",
+                         "EndDate":  "2026-10-01",
+                         "Progress":  100,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Stakeholder review",
+                                           "Status":  "Done",
+                                           "Assignee":  "Sana Iqbal"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-017",
+                         "Name":  "Warehouse Management System",
+                         "Description":  "Dummy description for Warehouse Management System.",
+                         "Status":  "Not Started",
+                         "StatusState":  "None",
+                         "Owner":  "Meera Iyer",
+                         "Priority":  "Medium",
+                         "StartDate":  "2026-05-01",
+                         "EndDate":  "2026-12-01",
+                         "Progress":  0,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Requirements gathering",
+                                           "Status":  "Done",
+                                           "Assignee":  "Meera Iyer"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Design phase",
+                                           "Status":  "Open",
+                                           "Assignee":  "Vikram Singh"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-018",
+                         "Name":  "Customer Support Chatbot",
+                         "Description":  "Dummy description for Customer Support Chatbot.",
+                         "Status":  "In Progress",
+                         "StatusState":  "Warning",
+                         "Owner":  "Vikram Singh",
+                         "Priority":  "Low",
+                         "StartDate":  "2026-06-01",
+                         "EndDate":  "2027-02-01",
+                         "Progress":  79,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Design phase",
+                                           "Status":  "Done",
+                                           "Assignee":  "Vikram Singh"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Development",
+                                           "Status":  "Done",
+                                           "Assignee":  "Neha Kapoor"
+                                       },
+                                       {
+                                           "TaskID":  "T3",
+                                           "Title":  "Testing",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Arjun Reddy"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-019",
+                         "Name":  "Sales Forecasting Tool",
+                         "Description":  "Dummy description for Sales Forecasting Tool.",
+                         "Status":  "At Risk",
+                         "StatusState":  "Error",
+                         "Owner":  "Neha Kapoor",
+                         "Priority":  "High",
+                         "StartDate":  "2026-07-01",
+                         "EndDate":  "2027-01-01",
+                         "Progress":  55,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Development",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Neha Kapoor"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-020",
+                         "Name":  "Document Management System",
+                         "Description":  "Dummy description for Document Management System.",
+                         "Status":  "Completed",
+                         "StatusState":  "Success",
+                         "Owner":  "Arjun Reddy",
+                         "Priority":  "Medium",
+                         "StartDate":  "2026-08-01",
+                         "EndDate":  "2027-03-01",
+                         "Progress":  100,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Testing",
+                                           "Status":  "Done",
+                                           "Assignee":  "Arjun Reddy"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "UAT",
+                                           "Status":  "Done",
+                                           "Assignee":  "Anita Sharma"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-021",
+                         "Name":  "Learning Management System",
+                         "Description":  "Dummy description for Learning Management System.",
+                         "Status":  "Not Started",
+                         "StatusState":  "None",
+                         "Owner":  "Anita Sharma",
+                         "Priority":  "Low",
+                         "StartDate":  "2026-09-01",
+                         "EndDate":  "2027-05-01",
+                         "Progress":  0,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "UAT",
+                                           "Status":  "Done",
+                                           "Assignee":  "Anita Sharma"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Deployment",
+                                           "Status":  "Done",
+                                           "Assignee":  "Karan Mehta"
+                                       },
+                                       {
+                                           "TaskID":  "T3",
+                                           "Title":  "Documentation",
+                                           "Status":  "Open",
+                                           "Assignee":  "Deepak Rao"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-022",
+                         "Name":  "Fleet Tracking System",
+                         "Description":  "Dummy description for Fleet Tracking System.",
+                         "Status":  "In Progress",
+                         "StatusState":  "Warning",
+                         "Owner":  "Karan Mehta",
+                         "Priority":  "High",
+                         "StartDate":  "2026-10-01",
+                         "EndDate":  "2027-04-01",
+                         "Progress":  47,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Deployment",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Karan Mehta"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-023",
+                         "Name":  "Expense Reporting Tool",
+                         "Description":  "Dummy description for Expense Reporting Tool.",
+                         "Status":  "At Risk",
+                         "StatusState":  "Error",
+                         "Owner":  "Deepak Rao",
+                         "Priority":  "Medium",
+                         "StartDate":  "2026-11-01",
+                         "EndDate":  "2027-06-01",
+                         "Progress":  25,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Documentation",
+                                           "Status":  "Done",
+                                           "Assignee":  "Deepak Rao"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Stakeholder review",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Priya Nair"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-024",
+                         "Name":  "Vendor Management Portal",
+                         "Description":  "Dummy description for Vendor Management Portal.",
+                         "Status":  "Completed",
+                         "StatusState":  "Success",
+                         "Owner":  "Priya Nair",
+                         "Priority":  "Low",
+                         "StartDate":  "2026-12-01",
+                         "EndDate":  "2027-08-01",
+                         "Progress":  100,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Stakeholder review",
+                                           "Status":  "Done",
+                                           "Assignee":  "Priya Nair"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Requirements gathering",
+                                           "Status":  "Done",
+                                           "Assignee":  "Rahul Verma"
+                                       },
+                                       {
+                                           "TaskID":  "T3",
+                                           "Title":  "Design phase",
+                                           "Status":  "Done",
+                                           "Assignee":  "Sana Iqbal"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-025",
+                         "Name":  "Quality Assurance Automation",
+                         "Description":  "Dummy description for Quality Assurance Automation.",
+                         "Status":  "Not Started",
+                         "StatusState":  "None",
+                         "Owner":  "Rahul Verma",
+                         "Priority":  "High",
+                         "StartDate":  "2026-01-01",
+                         "EndDate":  "2026-07-01",
+                         "Progress":  0,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Requirements gathering",
+                                           "Status":  "Open",
+                                           "Assignee":  "Rahul Verma"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-026",
+                         "Name":  "Network Infrastructure Upgrade",
+                         "Description":  "Dummy description for Network Infrastructure Upgrade.",
+                         "Status":  "In Progress",
+                         "StatusState":  "Warning",
+                         "Owner":  "Sana Iqbal",
+                         "Priority":  "Medium",
+                         "StartDate":  "2026-02-01",
+                         "EndDate":  "2026-09-01",
+                         "Progress":  75,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Design phase",
+                                           "Status":  "Done",
+                                           "Assignee":  "Sana Iqbal"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Development",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Meera Iyer"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-027",
+                         "Name":  "Data Warehouse Consolidation",
+                         "Description":  "Dummy description for Data Warehouse Consolidation.",
+                         "Status":  "At Risk",
+                         "StatusState":  "Error",
+                         "Owner":  "Meera Iyer",
+                         "Priority":  "Low",
+                         "StartDate":  "2026-03-01",
+                         "EndDate":  "2026-11-01",
+                         "Progress":  45,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Development",
+                                           "Status":  "Done",
+                                           "Assignee":  "Meera Iyer"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Testing",
+                                           "Status":  "Done",
+                                           "Assignee":  "Vikram Singh"
+                                       },
+                                       {
+                                           "TaskID":  "T3",
+                                           "Title":  "UAT",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Neha Kapoor"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-028",
+                         "Name":  "Mobile Payments Rollout",
+                         "Description":  "Dummy description for Mobile Payments Rollout.",
+                         "Status":  "Completed",
+                         "StatusState":  "Success",
+                         "Owner":  "Vikram Singh",
+                         "Priority":  "High",
+                         "StartDate":  "2026-04-01",
+                         "EndDate":  "2026-10-01",
+                         "Progress":  100,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Testing",
+                                           "Status":  "Done",
+                                           "Assignee":  "Vikram Singh"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-029",
+                         "Name":  "Legacy System Decommission",
+                         "Description":  "Dummy description for Legacy System Decommission.",
+                         "Status":  "Not Started",
+                         "StatusState":  "None",
+                         "Owner":  "Neha Kapoor",
+                         "Priority":  "Medium",
+                         "StartDate":  "2026-05-01",
+                         "EndDate":  "2026-12-01",
+                         "Progress":  0,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "UAT",
+                                           "Status":  "Done",
+                                           "Assignee":  "Neha Kapoor"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Deployment",
+                                           "Status":  "Open",
+                                           "Assignee":  "Arjun Reddy"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-030",
+                         "Name":  "Digital Signature Integration",
+                         "Description":  "Dummy description for Digital Signature Integration.",
+                         "Status":  "In Progress",
+                         "StatusState":  "Warning",
+                         "Owner":  "Arjun Reddy",
+                         "Priority":  "Low",
+                         "StartDate":  "2026-06-01",
+                         "EndDate":  "2027-02-01",
+                         "Progress":  43,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Deployment",
+                                           "Status":  "Done",
+                                           "Assignee":  "Arjun Reddy"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Documentation",
+                                           "Status":  "Done",
+                                           "Assignee":  "Anita Sharma"
+                                       },
+                                       {
+                                           "TaskID":  "T3",
+                                           "Title":  "Stakeholder review",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Karan Mehta"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-031",
+                         "Name":  "Contract Management System",
+                         "Description":  "Dummy description for Contract Management System.",
+                         "Status":  "At Risk",
+                         "StatusState":  "Error",
+                         "Owner":  "Anita Sharma",
+                         "Priority":  "High",
+                         "StartDate":  "2026-07-01",
+                         "EndDate":  "2027-01-01",
+                         "Progress":  15,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Documentation",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Anita Sharma"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-032",
+                         "Name":  "IT Helpdesk Revamp",
+                         "Description":  "Dummy description for IT Helpdesk Revamp.",
+                         "Status":  "Completed",
+                         "StatusState":  "Success",
+                         "Owner":  "Karan Mehta",
+                         "Priority":  "Medium",
+                         "StartDate":  "2026-08-01",
+                         "EndDate":  "2027-03-01",
+                         "Progress":  100,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Stakeholder review",
+                                           "Status":  "Done",
+                                           "Assignee":  "Karan Mehta"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Requirements gathering",
+                                           "Status":  "Done",
+                                           "Assignee":  "Deepak Rao"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-033",
+                         "Name":  "Analytics Platform Migration",
+                         "Description":  "Dummy description for Analytics Platform Migration.",
+                         "Status":  "Not Started",
+                         "StatusState":  "None",
+                         "Owner":  "Deepak Rao",
+                         "Priority":  "Low",
+                         "StartDate":  "2026-09-01",
+                         "EndDate":  "2027-05-01",
+                         "Progress":  0,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Requirements gathering",
+                                           "Status":  "Done",
+                                           "Assignee":  "Deepak Rao"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Design phase",
+                                           "Status":  "Done",
+                                           "Assignee":  "Priya Nair"
+                                       },
+                                       {
+                                           "TaskID":  "T3",
+                                           "Title":  "Development",
+                                           "Status":  "Open",
+                                           "Assignee":  "Rahul Verma"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-034",
+                         "Name":  "Field Service App",
+                         "Description":  "Dummy description for Field Service App.",
+                         "Status":  "In Progress",
+                         "StatusState":  "Warning",
+                         "Owner":  "Priya Nair",
+                         "Priority":  "High",
+                         "StartDate":  "2026-10-01",
+                         "EndDate":  "2027-04-01",
+                         "Progress":  71,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Design phase",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Priya Nair"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-035",
+                         "Name":  "Recruitment Portal Upgrade",
+                         "Description":  "Dummy description for Recruitment Portal Upgrade.",
+                         "Status":  "At Risk",
+                         "StatusState":  "Error",
+                         "Owner":  "Rahul Verma",
+                         "Priority":  "Medium",
+                         "StartDate":  "2026-11-01",
+                         "EndDate":  "2027-06-01",
+                         "Progress":  35,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Development",
+                                           "Status":  "Done",
+                                           "Assignee":  "Rahul Verma"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Testing",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Sana Iqbal"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-036",
+                         "Name":  "Performance Review System",
+                         "Description":  "Dummy description for Performance Review System.",
+                         "Status":  "Completed",
+                         "StatusState":  "Success",
+                         "Owner":  "Sana Iqbal",
+                         "Priority":  "Low",
+                         "StartDate":  "2026-12-01",
+                         "EndDate":  "2027-08-01",
+                         "Progress":  100,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Testing",
+                                           "Status":  "Done",
+                                           "Assignee":  "Sana Iqbal"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "UAT",
+                                           "Status":  "Done",
+                                           "Assignee":  "Meera Iyer"
+                                       },
+                                       {
+                                           "TaskID":  "T3",
+                                           "Title":  "Deployment",
+                                           "Status":  "Done",
+                                           "Assignee":  "Vikram Singh"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-037",
+                         "Name":  "Budget Planning Tool",
+                         "Description":  "Dummy description for Budget Planning Tool.",
+                         "Status":  "Not Started",
+                         "StatusState":  "None",
+                         "Owner":  "Meera Iyer",
+                         "Priority":  "High",
+                         "StartDate":  "2026-01-01",
+                         "EndDate":  "2026-07-01",
+                         "Progress":  0,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "UAT",
+                                           "Status":  "Open",
+                                           "Assignee":  "Meera Iyer"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-038",
+                         "Name":  "Asset Tracking System",
+                         "Description":  "Dummy description for Asset Tracking System.",
+                         "Status":  "In Progress",
+                         "StatusState":  "Warning",
+                         "Owner":  "Vikram Singh",
+                         "Priority":  "Medium",
+                         "StartDate":  "2026-02-01",
+                         "EndDate":  "2026-09-01",
+                         "Progress":  39,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Deployment",
+                                           "Status":  "Done",
+                                           "Assignee":  "Vikram Singh"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Documentation",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Neha Kapoor"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-039",
+                         "Name":  "Customer Feedback Portal",
+                         "Description":  "Dummy description for Customer Feedback Portal.",
+                         "Status":  "At Risk",
+                         "StatusState":  "Error",
+                         "Owner":  "Neha Kapoor",
+                         "Priority":  "Low",
+                         "StartDate":  "2026-03-01",
+                         "EndDate":  "2026-11-01",
+                         "Progress":  55,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Documentation",
+                                           "Status":  "Done",
+                                           "Assignee":  "Neha Kapoor"
+                                       },
+                                       {
+                                           "TaskID":  "T2",
+                                           "Title":  "Stakeholder review",
+                                           "Status":  "Done",
+                                           "Assignee":  "Arjun Reddy"
+                                       },
+                                       {
+                                           "TaskID":  "T3",
+                                           "Title":  "Requirements gathering",
+                                           "Status":  "In Progress",
+                                           "Assignee":  "Anita Sharma"
+                                       }
+                                   ]
+                     },
+                     {
+                         "ProjectID":  "PRJ-040",
+                         "Name":  "Disaster Recovery Planning",
+                         "Description":  "Dummy description for Disaster Recovery Planning.",
+                         "Status":  "Completed",
+                         "StatusState":  "Success",
+                         "Owner":  "Arjun Reddy",
+                         "Priority":  "High",
+                         "StartDate":  "2026-04-01",
+                         "EndDate":  "2026-10-01",
+                         "Progress":  100,
+                         "Tasks":  [
+                                       {
+                                           "TaskID":  "T1",
+                                           "Title":  "Stakeholder review",
+                                           "Status":  "Done",
+                                           "Assignee":  "Arjun Reddy"
+                                       }
+                                   ]
+                     }
+                 ]
+}

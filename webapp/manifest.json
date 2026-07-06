@@ -1,0 +1,102 @@
+{
+  "_version": "1.85.0",
+  "sap.app": {
+    "id": "com.projectone.projectoneui",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.27.0",
+      "toolsId": "12927b5e-ea67-4555-a209-10a68ba56110"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.149.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.projectone.projectoneui.i18n.i18n"
+        }
+      },
+      "project": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "data/dummy.json"
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "com.projectone.projectoneui.view",
+        "async": true,
+        "viewPath": "com.projectone.projectoneui.view"
+      },
+      "routes": [
+        {
+          "name": "RouteProjectList",
+          "pattern": ":?query:",
+          "target": [
+            "TargetProjectList"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetProjectList": {
+          "id": "ProjectList",
+          "name": "ProjectList"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "com.projectone.projectoneui.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}
