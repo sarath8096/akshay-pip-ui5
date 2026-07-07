@@ -5,7 +5,7 @@ sap.ui.define([
 
     return {
         /**
-         * Formats a date value to "MMM dd, yyyy"
+         * Formats a date value to "dd/MM/yy"
          * @param {string|number|Date} vDate
          * @returns {string}
          */
@@ -20,7 +20,7 @@ sap.ui.define([
             }
 
             const oDateFormat = DateFormat.getDateInstance({
-                pattern: "MMM dd, yyyy",
+                pattern: "dd/MM/yy",
                 UTC: true
             });
 
