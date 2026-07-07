@@ -1,9 +1,50 @@
 {
+    "Owners":  [
+                   {
+                       "Email":  "anita.sharma@projectone.com",
+                       "Name":  "Anita Sharma"
+                   },
+                   {
+                       "Email":  "karan.mehta@projectone.com",
+                       "Name":  "Karan Mehta"
+                   },
+                   {
+                       "Email":  "deepak.rao@projectone.com",
+                       "Name":  "Deepak Rao"
+                   },
+                   {
+                       "Email":  "priya.nair@projectone.com",
+                       "Name":  "Priya Nair"
+                   },
+                   {
+                       "Email":  "rahul.verma@projectone.com",
+                       "Name":  "Rahul Verma"
+                   },
+                   {
+                       "Email":  "sana.iqbal@projectone.com",
+                       "Name":  "Sana Iqbal"
+                   },
+                   {
+                       "Email":  "meera.iyer@projectone.com",
+                       "Name":  "Meera Iyer"
+                   },
+                   {
+                       "Email":  "vikram.singh@projectone.com",
+                       "Name":  "Vikram Singh"
+                   },
+                   {
+                       "Email":  "neha.kapoor@projectone.com",
+                       "Name":  "Neha Kapoor"
+                   },
+                   {
+                       "Email":  "arjun.reddy@projectone.com",
+                       "Name":  "Arjun Reddy"
+                   }
+               ],
     "Projects":  [
                      {
                          "ProjectID":  "PRJ-001",
                          "Name":  "Website Redesign",
-                         "Description":  "Dummy description for Website Redesign.",
                          "Status":  "Not Started",
                          "StatusState":  "None",
                          "Owner":  "Anita Sharma",
@@ -18,12 +59,14 @@
                                            "Status":  "Open",
                                            "Assignee":  "Anita Sharma"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Website Redesign.",
+                         "LongDescription":  "Dummy description for Website Redesign. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "anita.sharma@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-002",
                          "Name":  "Mobile App Launch",
-                         "Description":  "Dummy description for Mobile App Launch.",
                          "Status":  "In Progress",
                          "StatusState":  "Warning",
                          "Owner":  "Karan Mehta",
@@ -44,12 +87,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Deepak Rao"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Mobile App Launch.",
+                         "LongDescription":  "Dummy description for Mobile App Launch. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "karan.mehta@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-003",
                          "Name":  "Data Migration",
-                         "Description":  "Dummy description for Data Migration.",
                          "Status":  "At Risk",
                          "StatusState":  "Error",
                          "Owner":  "Deepak Rao",
@@ -76,12 +121,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Rahul Verma"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Data Migration.",
+                         "LongDescription":  "Dummy description for Data Migration. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "deepak.rao@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-004",
                          "Name":  "Customer Portal Upgrade",
-                         "Description":  "Dummy description for Customer Portal Upgrade.",
                          "Status":  "Completed",
                          "StatusState":  "Success",
                          "Owner":  "Priya Nair",
@@ -96,12 +143,14 @@
                                            "Status":  "Done",
                                            "Assignee":  "Priya Nair"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Customer Portal Upgrade.",
+                         "LongDescription":  "Dummy description for Customer Portal Upgrade. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "priya.nair@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-005",
                          "Name":  "Internal HR System",
-                         "Description":  "Dummy description for Internal HR System.",
                          "Status":  "Not Started",
                          "StatusState":  "None",
                          "Owner":  "Rahul Verma",
@@ -122,12 +171,14 @@
                                            "Status":  "Open",
                                            "Assignee":  "Sana Iqbal"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Internal HR System.",
+                         "LongDescription":  "Dummy description for Internal HR System. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "rahul.verma@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-006",
                          "Name":  "Cloud Infrastructure Migration",
-                         "Description":  "Dummy description for Cloud Infrastructure Migration.",
                          "Status":  "In Progress",
                          "StatusState":  "Warning",
                          "Owner":  "Sana Iqbal",
@@ -154,12 +205,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Vikram Singh"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Cloud Infrastructure Migration.",
+                         "LongDescription":  "Dummy description for Cloud Infrastructure Migration. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "sana.iqbal@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-007",
                          "Name":  "Payment Gateway Integration",
-                         "Description":  "Dummy description for Payment Gateway Integration.",
                          "Status":  "At Risk",
                          "StatusState":  "Error",
                          "Owner":  "Meera Iyer",
@@ -174,12 +227,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Meera Iyer"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Payment Gateway Integration.",
+                         "LongDescription":  "Dummy description for Payment Gateway Integration. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "meera.iyer@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-008",
                          "Name":  "CRM Implementation",
-                         "Description":  "Dummy description for CRM Implementation.",
                          "Status":  "Completed",
                          "StatusState":  "Success",
                          "Owner":  "Vikram Singh",
@@ -200,12 +255,14 @@
                                            "Status":  "Done",
                                            "Assignee":  "Neha Kapoor"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for CRM Implementation.",
+                         "LongDescription":  "Dummy description for CRM Implementation. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "vikram.singh@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-009",
                          "Name":  "Inventory Management System",
-                         "Description":  "Dummy description for Inventory Management System.",
                          "Status":  "Not Started",
                          "StatusState":  "None",
                          "Owner":  "Neha Kapoor",
@@ -232,12 +289,14 @@
                                            "Status":  "Open",
                                            "Assignee":  "Anita Sharma"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Inventory Management System.",
+                         "LongDescription":  "Dummy description for Inventory Management System. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "neha.kapoor@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-010",
                          "Name":  "Employee Onboarding Portal",
-                         "Description":  "Dummy description for Employee Onboarding Portal.",
                          "Status":  "In Progress",
                          "StatusState":  "Warning",
                          "Owner":  "Arjun Reddy",
@@ -252,12 +311,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Arjun Reddy"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Employee Onboarding Portal.",
+                         "LongDescription":  "Dummy description for Employee Onboarding Portal. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "arjun.reddy@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-011",
                          "Name":  "Marketing Automation Platform",
-                         "Description":  "Dummy description for Marketing Automation Platform.",
                          "Status":  "At Risk",
                          "StatusState":  "Error",
                          "Owner":  "Anita Sharma",
@@ -278,12 +339,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Karan Mehta"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Marketing Automation Platform.",
+                         "LongDescription":  "Dummy description for Marketing Automation Platform. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "anita.sharma@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-012",
                          "Name":  "Business Intelligence Dashboard",
-                         "Description":  "Dummy description for Business Intelligence Dashboard.",
                          "Status":  "Completed",
                          "StatusState":  "Success",
                          "Owner":  "Karan Mehta",
@@ -310,12 +373,14 @@
                                            "Status":  "Done",
                                            "Assignee":  "Priya Nair"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Business Intelligence Dashboard.",
+                         "LongDescription":  "Dummy description for Business Intelligence Dashboard. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "karan.mehta@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-013",
                          "Name":  "Supply Chain Optimization",
-                         "Description":  "Dummy description for Supply Chain Optimization.",
                          "Status":  "Not Started",
                          "StatusState":  "None",
                          "Owner":  "Deepak Rao",
@@ -330,12 +395,14 @@
                                            "Status":  "Open",
                                            "Assignee":  "Deepak Rao"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Supply Chain Optimization.",
+                         "LongDescription":  "Dummy description for Supply Chain Optimization. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "deepak.rao@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-014",
                          "Name":  "E-Commerce Platform Revamp",
-                         "Description":  "Dummy description for E-Commerce Platform Revamp.",
                          "Status":  "In Progress",
                          "StatusState":  "Warning",
                          "Owner":  "Priya Nair",
@@ -356,12 +423,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Rahul Verma"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for E-Commerce Platform Revamp.",
+                         "LongDescription":  "Dummy description for E-Commerce Platform Revamp. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "priya.nair@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-015",
                          "Name":  "Security Compliance Audit",
-                         "Description":  "Dummy description for Security Compliance Audit.",
                          "Status":  "At Risk",
                          "StatusState":  "Error",
                          "Owner":  "Rahul Verma",
@@ -388,12 +457,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Meera Iyer"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Security Compliance Audit.",
+                         "LongDescription":  "Dummy description for Security Compliance Audit. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "rahul.verma@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-016",
                          "Name":  "API Gateway Modernization",
-                         "Description":  "Dummy description for API Gateway Modernization.",
                          "Status":  "Completed",
                          "StatusState":  "Success",
                          "Owner":  "Sana Iqbal",
@@ -408,12 +479,14 @@
                                            "Status":  "Done",
                                            "Assignee":  "Sana Iqbal"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for API Gateway Modernization.",
+                         "LongDescription":  "Dummy description for API Gateway Modernization. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "sana.iqbal@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-017",
                          "Name":  "Warehouse Management System",
-                         "Description":  "Dummy description for Warehouse Management System.",
                          "Status":  "Not Started",
                          "StatusState":  "None",
                          "Owner":  "Meera Iyer",
@@ -434,12 +507,14 @@
                                            "Status":  "Open",
                                            "Assignee":  "Vikram Singh"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Warehouse Management System.",
+                         "LongDescription":  "Dummy description for Warehouse Management System. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "meera.iyer@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-018",
                          "Name":  "Customer Support Chatbot",
-                         "Description":  "Dummy description for Customer Support Chatbot.",
                          "Status":  "In Progress",
                          "StatusState":  "Warning",
                          "Owner":  "Vikram Singh",
@@ -466,12 +541,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Arjun Reddy"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Customer Support Chatbot.",
+                         "LongDescription":  "Dummy description for Customer Support Chatbot. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "vikram.singh@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-019",
                          "Name":  "Sales Forecasting Tool",
-                         "Description":  "Dummy description for Sales Forecasting Tool.",
                          "Status":  "At Risk",
                          "StatusState":  "Error",
                          "Owner":  "Neha Kapoor",
@@ -486,12 +563,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Neha Kapoor"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Sales Forecasting Tool.",
+                         "LongDescription":  "Dummy description for Sales Forecasting Tool. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "neha.kapoor@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-020",
                          "Name":  "Document Management System",
-                         "Description":  "Dummy description for Document Management System.",
                          "Status":  "Completed",
                          "StatusState":  "Success",
                          "Owner":  "Arjun Reddy",
@@ -512,12 +591,14 @@
                                            "Status":  "Done",
                                            "Assignee":  "Anita Sharma"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Document Management System.",
+                         "LongDescription":  "Dummy description for Document Management System. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "arjun.reddy@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-021",
                          "Name":  "Learning Management System",
-                         "Description":  "Dummy description for Learning Management System.",
                          "Status":  "Not Started",
                          "StatusState":  "None",
                          "Owner":  "Anita Sharma",
@@ -544,12 +625,14 @@
                                            "Status":  "Open",
                                            "Assignee":  "Deepak Rao"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Learning Management System.",
+                         "LongDescription":  "Dummy description for Learning Management System. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "anita.sharma@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-022",
                          "Name":  "Fleet Tracking System",
-                         "Description":  "Dummy description for Fleet Tracking System.",
                          "Status":  "In Progress",
                          "StatusState":  "Warning",
                          "Owner":  "Karan Mehta",
@@ -564,12 +647,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Karan Mehta"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Fleet Tracking System.",
+                         "LongDescription":  "Dummy description for Fleet Tracking System. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "karan.mehta@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-023",
                          "Name":  "Expense Reporting Tool",
-                         "Description":  "Dummy description for Expense Reporting Tool.",
                          "Status":  "At Risk",
                          "StatusState":  "Error",
                          "Owner":  "Deepak Rao",
@@ -590,12 +675,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Priya Nair"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Expense Reporting Tool.",
+                         "LongDescription":  "Dummy description for Expense Reporting Tool. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "deepak.rao@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-024",
                          "Name":  "Vendor Management Portal",
-                         "Description":  "Dummy description for Vendor Management Portal.",
                          "Status":  "Completed",
                          "StatusState":  "Success",
                          "Owner":  "Priya Nair",
@@ -622,12 +709,14 @@
                                            "Status":  "Done",
                                            "Assignee":  "Sana Iqbal"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Vendor Management Portal.",
+                         "LongDescription":  "Dummy description for Vendor Management Portal. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "priya.nair@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-025",
                          "Name":  "Quality Assurance Automation",
-                         "Description":  "Dummy description for Quality Assurance Automation.",
                          "Status":  "Not Started",
                          "StatusState":  "None",
                          "Owner":  "Rahul Verma",
@@ -642,12 +731,14 @@
                                            "Status":  "Open",
                                            "Assignee":  "Rahul Verma"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Quality Assurance Automation.",
+                         "LongDescription":  "Dummy description for Quality Assurance Automation. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "rahul.verma@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-026",
                          "Name":  "Network Infrastructure Upgrade",
-                         "Description":  "Dummy description for Network Infrastructure Upgrade.",
                          "Status":  "In Progress",
                          "StatusState":  "Warning",
                          "Owner":  "Sana Iqbal",
@@ -668,12 +759,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Meera Iyer"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Network Infrastructure Upgrade.",
+                         "LongDescription":  "Dummy description for Network Infrastructure Upgrade. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "sana.iqbal@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-027",
                          "Name":  "Data Warehouse Consolidation",
-                         "Description":  "Dummy description for Data Warehouse Consolidation.",
                          "Status":  "At Risk",
                          "StatusState":  "Error",
                          "Owner":  "Meera Iyer",
@@ -700,12 +793,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Neha Kapoor"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Data Warehouse Consolidation.",
+                         "LongDescription":  "Dummy description for Data Warehouse Consolidation. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "meera.iyer@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-028",
                          "Name":  "Mobile Payments Rollout",
-                         "Description":  "Dummy description for Mobile Payments Rollout.",
                          "Status":  "Completed",
                          "StatusState":  "Success",
                          "Owner":  "Vikram Singh",
@@ -720,12 +815,14 @@
                                            "Status":  "Done",
                                            "Assignee":  "Vikram Singh"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Mobile Payments Rollout.",
+                         "LongDescription":  "Dummy description for Mobile Payments Rollout. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "vikram.singh@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-029",
                          "Name":  "Legacy System Decommission",
-                         "Description":  "Dummy description for Legacy System Decommission.",
                          "Status":  "Not Started",
                          "StatusState":  "None",
                          "Owner":  "Neha Kapoor",
@@ -746,12 +843,14 @@
                                            "Status":  "Open",
                                            "Assignee":  "Arjun Reddy"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Legacy System Decommission.",
+                         "LongDescription":  "Dummy description for Legacy System Decommission. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "neha.kapoor@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-030",
                          "Name":  "Digital Signature Integration",
-                         "Description":  "Dummy description for Digital Signature Integration.",
                          "Status":  "In Progress",
                          "StatusState":  "Warning",
                          "Owner":  "Arjun Reddy",
@@ -778,12 +877,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Karan Mehta"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Digital Signature Integration.",
+                         "LongDescription":  "Dummy description for Digital Signature Integration. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "arjun.reddy@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-031",
                          "Name":  "Contract Management System",
-                         "Description":  "Dummy description for Contract Management System.",
                          "Status":  "At Risk",
                          "StatusState":  "Error",
                          "Owner":  "Anita Sharma",
@@ -798,12 +899,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Anita Sharma"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Contract Management System.",
+                         "LongDescription":  "Dummy description for Contract Management System. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "anita.sharma@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-032",
                          "Name":  "IT Helpdesk Revamp",
-                         "Description":  "Dummy description for IT Helpdesk Revamp.",
                          "Status":  "Completed",
                          "StatusState":  "Success",
                          "Owner":  "Karan Mehta",
@@ -824,12 +927,14 @@
                                            "Status":  "Done",
                                            "Assignee":  "Deepak Rao"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for IT Helpdesk Revamp.",
+                         "LongDescription":  "Dummy description for IT Helpdesk Revamp. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "karan.mehta@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-033",
                          "Name":  "Analytics Platform Migration",
-                         "Description":  "Dummy description for Analytics Platform Migration.",
                          "Status":  "Not Started",
                          "StatusState":  "None",
                          "Owner":  "Deepak Rao",
@@ -856,12 +961,14 @@
                                            "Status":  "Open",
                                            "Assignee":  "Rahul Verma"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Analytics Platform Migration.",
+                         "LongDescription":  "Dummy description for Analytics Platform Migration. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "deepak.rao@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-034",
                          "Name":  "Field Service App",
-                         "Description":  "Dummy description for Field Service App.",
                          "Status":  "In Progress",
                          "StatusState":  "Warning",
                          "Owner":  "Priya Nair",
@@ -876,12 +983,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Priya Nair"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Field Service App.",
+                         "LongDescription":  "Dummy description for Field Service App. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "priya.nair@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-035",
                          "Name":  "Recruitment Portal Upgrade",
-                         "Description":  "Dummy description for Recruitment Portal Upgrade.",
                          "Status":  "At Risk",
                          "StatusState":  "Error",
                          "Owner":  "Rahul Verma",
@@ -902,12 +1011,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Sana Iqbal"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Recruitment Portal Upgrade.",
+                         "LongDescription":  "Dummy description for Recruitment Portal Upgrade. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "rahul.verma@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-036",
                          "Name":  "Performance Review System",
-                         "Description":  "Dummy description for Performance Review System.",
                          "Status":  "Completed",
                          "StatusState":  "Success",
                          "Owner":  "Sana Iqbal",
@@ -934,12 +1045,14 @@
                                            "Status":  "Done",
                                            "Assignee":  "Vikram Singh"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Performance Review System.",
+                         "LongDescription":  "Dummy description for Performance Review System. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "sana.iqbal@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-037",
                          "Name":  "Budget Planning Tool",
-                         "Description":  "Dummy description for Budget Planning Tool.",
                          "Status":  "Not Started",
                          "StatusState":  "None",
                          "Owner":  "Meera Iyer",
@@ -954,12 +1067,14 @@
                                            "Status":  "Open",
                                            "Assignee":  "Meera Iyer"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Budget Planning Tool.",
+                         "LongDescription":  "Dummy description for Budget Planning Tool. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "meera.iyer@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-038",
                          "Name":  "Asset Tracking System",
-                         "Description":  "Dummy description for Asset Tracking System.",
                          "Status":  "In Progress",
                          "StatusState":  "Warning",
                          "Owner":  "Vikram Singh",
@@ -980,12 +1095,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Neha Kapoor"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Asset Tracking System.",
+                         "LongDescription":  "Dummy description for Asset Tracking System. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "vikram.singh@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-039",
                          "Name":  "Customer Feedback Portal",
-                         "Description":  "Dummy description for Customer Feedback Portal.",
                          "Status":  "At Risk",
                          "StatusState":  "Error",
                          "Owner":  "Neha Kapoor",
@@ -1012,12 +1129,14 @@
                                            "Status":  "In Progress",
                                            "Assignee":  "Anita Sharma"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Customer Feedback Portal.",
+                         "LongDescription":  "Dummy description for Customer Feedback Portal. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "neha.kapoor@projectone.com"
                      },
                      {
                          "ProjectID":  "PRJ-040",
                          "Name":  "Disaster Recovery Planning",
-                         "Description":  "Dummy description for Disaster Recovery Planning.",
                          "Status":  "Completed",
                          "StatusState":  "Success",
                          "Owner":  "Arjun Reddy",
@@ -1032,7 +1151,10 @@
                                            "Status":  "Done",
                                            "Assignee":  "Arjun Reddy"
                                        }
-                                   ]
+                                   ],
+                         "ShortDescription":  "Dummy description for Disaster Recovery Planning.",
+                         "LongDescription":  "Dummy description for Disaster Recovery Planning. This assessment covers planning, execution, and closure activities across all involved teams, with periodic milestone reviews to track progress against the original scope.",
+                         "OwnerEmail":  "arjun.reddy@projectone.com"
                      }
                  ]
 }

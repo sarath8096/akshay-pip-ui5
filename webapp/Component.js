@@ -1,15 +1,12 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
     "com/projectone/projectoneui/model/models"
-], (UIComponent, models) => {
+], function(UIComponent, models) {
     "use strict";
 
     return UIComponent.extend("com.projectone.projectoneui.Component", {
         metadata: {
-            manifest: "json",
-            interfaces: [
-                "sap.ui.core.IAsyncContentCreation"
-            ]
+            manifest: "json"
         },
 
         init() {

@@ -1,0 +1,76 @@
+<mvc:View controllerName="com.projectone.projectoneui.controller.list.ProjectList"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Table
+            id="projectTable"
+            items="{project>/Projects}"
+            noDataText="{i18n>projectListNoDataText}"
+            growing="true">
+            <headerToolbar>
+                <Toolbar id="tableHeaderToolbar">
+                    <Title id="tableTitle" text="{i18n>projectListTableTitle}" level="H2" />
+                    <ToolbarSpacer id="tableHeaderSpacer" />
+                    <Button id="btnSort" icon="sap-icon://sort" tooltip="{i18n>btnSortTooltip}" press="onSortButtonPress" />
+                </Toolbar>
+            </headerToolbar>
+            <columns>
+                <Column id="colName">
+                    <Text id="colNameText" text="{i18n>columnName}" />
+                </Column>
+                <Column id="colStatus">
+                    <Text id="colStatusText" text="{i18n>columnStatus}" />
+                </Column>
+                <Column id="colOwner">
+                    <Text id="colOwnerText" text="{i18n>columnOwner}" />
+                </Column>
+                <Column id="colPriority">
+                    <Text id="colPriorityText" text="{i18n>columnPriority}" />
+                </Column>
+                <Column id="colStartDate">
+                    <Text id="colStartDateText" text="{i18n>columnStartDate}" />
+                </Column>
+                <Column id="colEndDate">
+                    <Text id="colEndDateText" text="{i18n>columnEndDate}" />
+                </Column>
+                <Column id="colProgress" hAlign="End">
+                    <Text id="colProgressText" text="{i18n>columnProgress}" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem id="projectListItem" type="Navigation" press="onProjectPress">
+                    <cells>
+                        <ObjectIdentifier id="cellName" title="{project>Name}" />
+                        <ObjectStatus
+                            id="cellStatus"
+                            text="{project>Status}"
+                            state="{ path: 'project>Status', formatter: '.formatter.formatStatusState' }" />
+                        <Text id="cellOwner" text="{project>Owner}" />
+                        <Text id="cellPriority" text="{project>Priority}" />
+                        <Text id="cellStartDate" text="{ path: 'project>StartDate', formatter: '.formatter.formatDate' }" />
+                        <Text id="cellEndDate" text="{ path: 'project>EndDate', formatter: '.formatter.formatDate' }" />
+                        <ProgressIndicator
+                            id="cellProgress"
+                            percentValue="{project>Progress}"
+                            displayValue="{project>Progress}%"
+                            showValue="true" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+
+        <dependents>
+            <ViewSettingsDialog id="sortDialog" confirm="onSortConfirm">
+                <sortItems>
+                    <ViewSettingsItem id="sortItemName" key="Name" text="{i18n>columnName}" />
+                    <ViewSettingsItem id="sortItemStatus" key="Status" text="{i18n>columnStatus}" />
+                    <ViewSettingsItem id="sortItemOwner" key="Owner" text="{i18n>columnOwner}" />
+                    <ViewSettingsItem id="sortItemPriority" key="Priority" text="{i18n>columnPriority}" />
+                    <ViewSettingsItem id="sortItemStartDate" key="StartDate" text="{i18n>columnStartDate}" />
+                    <ViewSettingsItem id="sortItemEndDate" key="EndDate" text="{i18n>columnEndDate}" />
+                    <ViewSettingsItem id="sortItemProgress" key="Progress" text="{i18n>columnProgress}" />
+                </sortItems>
+            </ViewSettingsDialog>
+        </dependents>
+    </Page>
+</mvc:View>
