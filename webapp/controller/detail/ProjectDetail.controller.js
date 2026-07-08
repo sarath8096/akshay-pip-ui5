@@ -15,13 +15,14 @@ sap.ui.define([
          */
         fnInitialize(oEvent) {
             var sProjectId = oEvent.getParameter("arguments").projectId;
+            var oBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
 
             var oData = {
                 "editMode": false,
                 "editSnapshot": null,
                 "sectionOptions": [
-                    { "key": "infoSection", "text": "Project Information" },
-                    { "key": "tasksSection", "text": "Tasks" }
+                    { "key": "infoSection", "text": oBundle.getText("detailInfoPanelTitle") },
+                    { "key": "tasksSection", "text": oBundle.getText("detailTasksSectionTitle") }
                 ]
             };
 
@@ -44,6 +45,11 @@ sap.ui.define([
                 var iIndex = aProjects.findIndex(function (oProject) {
                     return oProject.ProjectID === sProjectId;
                 });
+
+                if (iIndex < 0) {
+                     that.onNavBack();
+                     return;
+                 }
 
                 that._sProjectPath = "/Projects/" + iIndex;
 

@@ -87,14 +87,14 @@
                     <ObjectPageSubSection id="infoSubSection">
                         <blocks>
                             <f:SimpleForm id="infoForm" editable="true" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" labelSpanS="12">
-                                <m:Label id="labelShortDescriptionEdit" text="{i18n>detailShortDescriptionTitle}" />
+                                <m:Label id="labelShortDescriptionEdit" text="{i18n>detailShortDescriptionTitle}" visible="{mProjectDetail>/editMode}"/>
                                 <m:Input id="inputShortDescription" visible="{mProjectDetail>/editMode}" value="{project>ShortDescription}" />
-                                <m:Label id="labelShortDescription" text="{i18n>detailShortDescriptionTitle}" />
+                                <m:Label id="labelShortDescription" text="{i18n>detailShortDescriptionTitle}" visible="{= !${mProjectDetail>/editMode} }"/>
                                 <m:Text id="textShortDescription" visible="{= !${mProjectDetail>/editMode} }" text="{project>ShortDescription}" />
 
-                                <m:Label id="labelLongDescriptionEdit" text="{i18n>detailLongDescriptionTitle}" />
+                                <m:Label id="labelLongDescriptionEdit" text="{i18n>detailLongDescriptionTitle}" visible="{mProjectDetail>/editMode}"/>
                                 <m:TextArea id="inputLongDescription" visible="{mProjectDetail>/editMode}" rows="4" value="{project>LongDescription}" />
-                                <m:Label id="labelLongDescription" text="{i18n>detailLongDescriptionTitle}" />
+                                <m:Label id="labelLongDescription" text="{i18n>detailLongDescriptionTitle}" visible="{= !${mProjectDetail>/editMode} }"/>
                                 <m:Text id="textLongDescription" visible="{= !${mProjectDetail>/editMode} }" text="{project>LongDescription}" />
                             </f:SimpleForm>
                         </blocks>

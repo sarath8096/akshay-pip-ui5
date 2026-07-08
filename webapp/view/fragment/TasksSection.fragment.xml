@@ -11,9 +11,9 @@
                 </VBox>
                 <ObjectStatus id="taskStatusText" text="{project>Status}" visible="{= !${mProjectDetail>/editMode} }" />
                 <Select id="taskStatusSelect" selectedKey="{project>Status}" visible="{mProjectDetail>/editMode}">
-                    <core:Item id="taskStatusOpen" key="Open" text="Open" />
-                    <core:Item id="taskStatusInProgress" key="In Progress" text="In Progress" />
-                    <core:Item id="taskStatusDone" key="Done" text="Done" />
+                    <core:Item id="taskStatusOpen" key="Open" text="{i18n>taskStatusOpen}" />
+                    <core:Item id="taskStatusInProgress" key="In Progress" text="{i18n>taskStatusInProgress}" />
+                    <core:Item id="taskStatusDone" key="Done" text="{i18n>taskStatusDone}" />
                 </Select>
             </HBox>
         </CustomListItem>
