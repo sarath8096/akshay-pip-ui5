@@ -47,10 +47,10 @@
                             state="{ path: 'project>Status', formatter: '.formatter.formatStatusState' }" />
                         <Text id="cellOwner" text="{project>Owner}" />
                         <ObjectStatus 
-                            id="cellPriority"
-                            text="{project>Priority}" 
-                            icon="{path: 'project>Priority', formatter: '.formatter.fnGetPriorityIconByCode'}"
-                            state="{path: 'project>Priority', formatter: '.formatter.fnGetPriorityStateByCode'}" />
+                        id="cellPriority"
+                        text="{project>Priority}" 
+                        icon="{path: 'project>Priority', formatter: '.formatter.fnGetPriorityIconByCode'}"
+                        state="{path: 'project>Priority', formatter: '.formatter.fnGetPriorityStateByCode'}" />
                         <Text id="cellStartDate" text="{ path: 'project>StartDate', formatter: '.formatter.formatDate' }" />
                         <Text id="cellEndDate" text="{ path: 'project>EndDate', formatter: '.formatter.formatDate' }" />
                         <ProgressIndicator
