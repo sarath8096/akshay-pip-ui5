@@ -46,10 +46,10 @@ sap.ui.define([
                     return oProject.ProjectID === sProjectId;
                 });
 
-                if (iIndex < 0) {
+                if(iIndex < 0) {
                      that.onNavBack();
                      return;
-                 }
+                }
 
                 that._sProjectPath = "/Projects/" + iIndex;
 

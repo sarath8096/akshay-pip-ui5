@@ -46,7 +46,11 @@
                             text="{project>Status}"
                             state="{ path: 'project>Status', formatter: '.formatter.formatStatusState' }" />
                         <Text id="cellOwner" text="{project>Owner}" />
-                        <Text id="cellPriority" text="{project>Priority}" />
+                        <ObjectStatus 
+                            id="cellPriority"
+                            text="{project>Priority}" 
+                            icon="{path: 'project>Priority', formatter: '.formatter.fnGetPriorityIconByCode'}"
+                            state="{path: 'project>Priority', formatter: '.formatter.fnGetPriorityStateByCode'}" />
                         <Text id="cellStartDate" text="{ path: 'project>StartDate', formatter: '.formatter.formatDate' }" />
                         <Text id="cellEndDate" text="{ path: 'project>EndDate', formatter: '.formatter.formatDate' }" />
                         <ProgressIndicator
@@ -65,7 +69,7 @@
                     <ViewSettingsItem id="sortItemName" key="Name" text="{i18n>columnName}" />
                     <ViewSettingsItem id="sortItemStatus" key="Status" text="{i18n>columnStatus}" />
                     <ViewSettingsItem id="sortItemOwner" key="Owner" text="{i18n>columnOwner}" />
-                    <ViewSettingsItem id="sortItemPriority" key="Priority" text="{i18n>columnPriority}" />
+                    <ViewSettingsItem id="sortItemPriority" key="Priority" text="{i18n>columnPriority}"  />
                     <ViewSettingsItem id="sortItemStartDate" key="StartDate" text="{i18n>columnStartDate}" />
                     <ViewSettingsItem id="sortItemEndDate" key="EndDate" text="{i18n>columnEndDate}" />
                     <ViewSettingsItem id="sortItemProgress" key="Progress" text="{i18n>columnProgress}" />

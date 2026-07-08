@@ -20,7 +20,7 @@ sap.ui.define([
             }
 
             const oDateFormat = DateFormat.getDateInstance({
-                pattern: "dd/MM/yy",
+                pattern: "MMM dd, yyyy",
                 UTC: true
             });
 
@@ -44,6 +44,35 @@ sap.ui.define([
                 default:
                     return "None";
             }
+        },
+
+        fnGetPriorityIconByCode: function (sPriority) {
+            switch (sPriority) {
+                case "High":
+                    return "sap-icon://arrow-top";
+                case "Medium":
+                    return "sap-icon://arrow-right";
+                case "Low":
+                    return "sap-icon://arrow-bottom";
+                default:
+                    return "";
+            }
+        },
+
+        fnGetPriorityStateByCode: function (sPriority) {
+            switch (sPriority) {
+                case "High":
+                    return "Error";
+                case "Medium":
+                    return "Warning";
+                case "Low":
+                    return "Success";
+                default:
+                    return "None";
+            }
         }
+
+
+
     };
 });
