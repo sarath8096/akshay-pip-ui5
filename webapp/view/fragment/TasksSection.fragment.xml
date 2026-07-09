@@ -1,0 +1,21 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <List id="tasksList" items="{project>Tasks}" noDataText="{i18n>projectListNoDataText}">
+        <CustomListItem id="taskItem">
+            <HBox id="taskItemBox" justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMargin">
+                <VBox id="taskInfoBox">
+                    <Text id="taskTitle" text="{project>Title}" />
+                    <Text id="taskAssigneeText" text="{project>Assignee}" visible="{= !${mProjectDetail>/editMode} }" />
+                    <Input id="taskAssigneeInput" value="{project>Assignee}" visible="{mProjectDetail>/editMode}" />
+                </VBox>
+                <ObjectStatus id="taskStatusText" text="{project>Status}" visible="{= !${mProjectDetail>/editMode} }" />
+                <Select id="taskStatusSelect" selectedKey="{project>Status}" visible="{mProjectDetail>/editMode}">
+                    <core:Item id="taskStatusOpen" key="Open" text="{i18n>taskStatusOpen}" />
+                    <core:Item id="taskStatusInProgress" key="In Progress" text="{i18n>taskStatusInProgress}" />
+                    <core:Item id="taskStatusDone" key="Done" text="{i18n>taskStatusDone}" />
+                </Select>
+            </HBox>
+        </CustomListItem>
+    </List>
+</core:FragmentDefinition>
