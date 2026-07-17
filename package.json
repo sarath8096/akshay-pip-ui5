@@ -1,33 +1,15 @@
 {
-  "name": "projectoneui",
+  "name": "projectone",
   "version": "0.0.1",
-  "description": "Project management list and detail app",
-  "keywords": [
-    "ui5",
-    "openui5",
-    "sapui5"
-  ],
-  "main": "webapp/index.html",
-  "dependencies": {},
-  "devDependencies": {
-    "@ui5/cli": "^4.0.33",
-    "@sap/ux-ui5-tooling": "1",
-    "@sap-ux/eslint-plugin-fiori-tools": "^10.0.0",
-    "eslint": "^10",
-    "ui5-task-zipper": "^3.4.x"
-  },
+  "description": "Build and deployment scripts",
   "scripts": {
-    "start": "fiori run --open \"test/flp.html#app-preview\"",
-    "start-local": "fiori run --config ./ui5-local.yaml --open \"test/flp.html#app-preview\"",
-    "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
-    "lint": "eslint ./",
-    "deploy": "fiori verify",
-    "deploy-config": "fiori add deploy-config",
-    "start-noflp": "fiori run --open \"/index.html?sap-ui-xx-viewCache=false\"",
-    "int-test": "fiori run --open \"test/integration/opaTests.qunit.html\"",
-    "start-variants-management": "fiori run --open \"/preview.html#app-preview\"",
-    "unit-test": "fiori run --open \"test/unit/unitTests.qunit.html\"",
-    "build:cf": "ui5 build preload --clean-dest --config ui5-deploy.yaml --include-task=generateCachebusterInfo"
+    "clean": "rimraf --glob resources mta_archives mta-op*",
+    "build": "rimraf resources mta_archives && mbt build --mtar archive",
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
+    "undeploy": "cf undeploy projectone --delete-services --delete-service-keys --delete-service-brokers"
   },
-  "sapuxLayer": "CUSTOMER_BASE"
+  "devDependencies": {
+    "mbt": "^1.2.49",
+    "rimraf": "^6.0.1"
+  }
 }
