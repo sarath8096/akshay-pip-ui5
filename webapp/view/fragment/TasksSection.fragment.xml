@@ -1,21 +1,50 @@
 <core:FragmentDefinition
     xmlns:core="sap.ui.core"
     xmlns="sap.m">
-    <List id="tasksList" items="{project>Tasks}" noDataText="{i18n>projectListNoDataText}">
-        <CustomListItem id="taskItem">
-            <HBox id="taskItemBox" justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMargin">
-                <VBox id="taskInfoBox">
-                    <Text id="taskTitle" text="{project>Title}" />
-                    <Text id="taskAssigneeText" text="{project>Assignee}" visible="{= !${mProjectDetail>/editMode} }" />
-                    <Input id="taskAssigneeInput" value="{project>Assignee}" visible="{mProjectDetail>/editMode}" />
-                </VBox>
-                <ObjectStatus id="taskStatusText" text="{project>Status}" visible="{= !${mProjectDetail>/editMode} }" />
-                <Select id="taskStatusSelect" selectedKey="{project>Status}" visible="{mProjectDetail>/editMode}">
-                    <core:Item id="taskStatusOpen" key="Open" text="{i18n>taskStatusOpen}" />
-                    <core:Item id="taskStatusInProgress" key="In Progress" text="{i18n>taskStatusInProgress}" />
-                    <core:Item id="taskStatusDone" key="Done" text="{i18n>taskStatusDone}" />
-                </Select>
-            </HBox>
-        </CustomListItem>
-    </List>
+    <VBox id="tasksSectionBox">
+        <Toolbar id="tasksToolbar">
+            <Title id="tasksToolbarTitle" text="{i18n>detailTasksSectionTitle}" />
+            <ToolbarSpacer id="tasksToolbarSpacer" />
+            <Button
+                id="btnEditTasks"
+                text="{i18n>btnEditProject}"
+                type="Transparent"
+                visible="{= !${mProjectDetail>/tab/taskManagement/isEdit} }"
+                press="onUpdateTask" />
+            <Button
+                id="btnSaveTasks"
+                text="{i18n>btnSaveProject}"
+                type="Transparent"
+                visible="{mProjectDetail>/tab/taskManagement/isEdit}"
+                press="onSaveTask" />
+            <Button
+                id="btnCancelTasks"
+                text="{i18n>btnCancelProject}"
+                type="Transparent"
+                visible="{mProjectDetail>/tab/taskManagement/isEdit}"
+                press="onCancelTask" />
+        </Toolbar>
+        <List id="tasksList" items="{mProjectDetail>/tab/taskManagement/list}" noDataText="{i18n>projectListNoDataText}">
+            <CustomListItem id="taskItem">
+                <HBox id="taskItemBox" justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMargin">
+                    <VBox id="taskInfoBox">
+                        <Text id="taskAssigneeText" text="{mProjectDetail>assignee/name}" visible="{= !${mProjectDetail>isEditable} }" />
+                        <Select id="taskAssigneeSelect" items="{mProjectDetail>/tab/taskManagement/owners}" selectedKey="{mProjectDetail>assignee_ID}" visible="{= !!${mProjectDetail>isEditable} }">
+                            <core:Item id="taskAssigneeItem" key="{mProjectDetail>ID}" text="{mProjectDetail>name}" />
+                        </Select>
+                    </VBox>
+                    <ObjectStatus
+                        id="taskStatusText"
+                        text="{mProjectDetail>status}"
+                        state="{ path: 'mProjectDetail>status', formatter: '.formatter.formatTaskStatusState' }"
+                        visible="{= !${mProjectDetail>isEditable} }" />
+                    <Select id="taskStatusSelect" selectedKey="{mProjectDetail>status}" visible="{= !!${mProjectDetail>isEditable} }">
+                        <core:Item id="taskStatusOpen" key="Open" text="{i18n>taskStatusOpen}" />
+                        <core:Item id="taskStatusInProgress" key="In Progress" text="{i18n>taskStatusInProgress}" />
+                        <core:Item id="taskStatusDone" key="Done" text="{i18n>taskStatusDone}" />
+                    </Select>
+                </HBox>
+            </CustomListItem>
+        </List>
+    </VBox>
 </core:FragmentDefinition>

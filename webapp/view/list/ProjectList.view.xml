@@ -4,13 +4,15 @@
     <Page id="page" title="{i18n>title}">
         <Table
             id="projectTable"
-            items="{project>/Projects}"
+            items="{project>/ProjectsList}"
             noDataText="{i18n>projectListNoDataText}"
-            growing="true">
+            growing="true"
+            sticky="HeaderToolbar,ColumnHeaders">
             <headerToolbar>
                 <Toolbar id="tableHeaderToolbar">
                     <Title id="tableTitle" text="{i18n>projectListTableTitle}" level="H2" />
                     <ToolbarSpacer id="tableHeaderSpacer" />
+                    <SearchField id="projectSearchField" width="20rem" placeholder="{i18n>searchFieldPlaceholder}" search="onSearch" liveChange="onSearch" />
                     <Button id="btnSort" icon="sap-icon://sort" tooltip="{i18n>btnSortTooltip}" press="onSortButtonPress" />
                 </Toolbar>
             </headerToolbar>
@@ -40,23 +42,23 @@
             <items>
                 <ColumnListItem id="projectListItem" type="Navigation" press="onProjectPress">
                     <cells>
-                        <ObjectIdentifier id="cellName" title="{project>Name}" />
+                        <ObjectIdentifier id="cellName" title="{project>name}" />
                         <ObjectStatus
                             id="cellStatus"
-                            text="{project>Status}"
-                            state="{ path: 'project>Status', formatter: '.formatter.formatStatusState' }" />
-                        <Text id="cellOwner" text="{project>Owner}" />
-                        <ObjectStatus 
+                            text="{project>status}"
+                            state="{ path: 'project>status', formatter: '.formatter.formatStatusState' }" />
+                        <Text id="cellOwner" text="{project>ownerName}" />
+                        <ObjectStatus
                         id="cellPriority"
-                        text="{project>Priority}" 
-                        icon="{path: 'project>Priority', formatter: '.formatter.fnGetPriorityIconByCode'}"
-                        state="{path: 'project>Priority', formatter: '.formatter.fnGetPriorityStateByCode'}" />
-                        <Text id="cellStartDate" text="{ path: 'project>StartDate', formatter: '.formatter.formatDate' }" />
-                        <Text id="cellEndDate" text="{ path: 'project>EndDate', formatter: '.formatter.formatDate' }" />
+                        text="{project>priority}"
+                        icon="{path: 'project>priority', formatter: '.formatter.fnGetPriorityIconByCode'}"
+                        state="{path: 'project>priority', formatter: '.formatter.fnGetPriorityStateByCode'}" />
+                        <Text id="cellStartDate" text="{ path: 'project>startDate', formatter: '.formatter.formatDate' }" />
+                        <Text id="cellEndDate" text="{ path: 'project>endDate', formatter: '.formatter.formatDate' }" />
                         <ProgressIndicator
                             id="cellProgress"
-                            percentValue="{project>Progress}"
-                            displayValue="{project>Progress}%"
+                            percentValue="{project>progress}"
+                            displayValue="{project>progress}%"
                             showValue="true" />
                     </cells>
                 </ColumnListItem>
@@ -66,13 +68,13 @@
         <dependents>
             <ViewSettingsDialog id="sortDialog" confirm="onSortConfirm">
                 <sortItems>
-                    <ViewSettingsItem id="sortItemName" key="Name" text="{i18n>columnName}" />
-                    <ViewSettingsItem id="sortItemStatus" key="Status" text="{i18n>columnStatus}" />
-                    <ViewSettingsItem id="sortItemOwner" key="Owner" text="{i18n>columnOwner}" />
-                    <ViewSettingsItem id="sortItemPriority" key="Priority" text="{i18n>columnPriority}"  />
-                    <ViewSettingsItem id="sortItemStartDate" key="StartDate" text="{i18n>columnStartDate}" />
-                    <ViewSettingsItem id="sortItemEndDate" key="EndDate" text="{i18n>columnEndDate}" />
-                    <ViewSettingsItem id="sortItemProgress" key="Progress" text="{i18n>columnProgress}" />
+                    <ViewSettingsItem id="sortItemName" key="name" text="{i18n>columnName}" />
+                    <ViewSettingsItem id="sortItemStatus" key="status" text="{i18n>columnStatus}" />
+                    <ViewSettingsItem id="sortItemOwner" key="ownerName" text="{i18n>columnOwner}" />
+                    <ViewSettingsItem id="sortItemPriority" key="priority" text="{i18n>columnPriority}"  />
+                    <ViewSettingsItem id="sortItemStartDate" key="startDate" text="{i18n>columnStartDate}" />
+                    <ViewSettingsItem id="sortItemEndDate" key="endDate" text="{i18n>columnEndDate}" />
+                    <ViewSettingsItem id="sortItemProgress" key="progress" text="{i18n>columnProgress}" />
                 </sortItems>
             </ViewSettingsDialog>
         </dependents>

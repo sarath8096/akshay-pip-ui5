@@ -5,7 +5,7 @@ sap.ui.define([
 
     return {
         /**
-         * Formats a date value to "dd/MM/yy"
+         * Formats a date value to "MMM dd, yyyy"
          * @param {string|number|Date} vDate
          * @returns {string}
          */
@@ -28,7 +28,16 @@ sap.ui.define([
         },
 
         /**
-         * formatStatusState to format state
+         * Converts a date string to a JS Date, for DatePicker minDate/maxDate binding
+         * @param {string} sDate
+         * @returns {Date}
+         */
+        formatToJSDate(sDate) {
+            return sDate ? new Date(sDate) : undefined;
+        },
+
+        /**
+         * Maps a project status to an ObjectStatus state
          * @param {string} sStatus
          * @returns {string}
          */
@@ -41,6 +50,23 @@ sap.ui.define([
                 case "In Progress":
                     return "Warning";
                 case "Not Started":
+                default:
+                    return "None";
+            }
+        },
+
+        /**
+         * Maps a task status to an ObjectStatus state
+         * @param {string} sStatus
+         * @returns {string}
+         */
+        formatTaskStatusState(sStatus) {
+            switch (sStatus) {
+                case "Done":
+                    return "Success";
+                case "In Progress":
+                    return "Warning";
+                case "Open":
                 default:
                     return "None";
             }
