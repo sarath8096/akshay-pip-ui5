@@ -14,6 +14,15 @@
       "id": "@sap/generator-fiori:basic",
       "version": "1.27.0",
       "toolsId": "12927b5e-ea67-4555-a209-10a68ba56110"
+    },
+    "dataSources": {
+      "projectService": {
+        "uri": "/odata/v4/project/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      }
     }
   },
   "sap.ui": {
@@ -55,8 +64,13 @@
         }
       },
       "project": {
-        "type": "sap.ui.model.json.JSONModel",
-        "uri": "data/dummy.json"
+        "dataSource": "projectService",
+        "preload": true,
+        "settings": {
+          "autoExpandSelect": true,
+          "synchronizationMode": "None",
+          "operationMode": "Server"
+        }
       }
     },
     "resources": {

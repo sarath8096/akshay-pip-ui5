@@ -1,0 +1,74 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <VBox id="taskManagementBox">
+        <Toolbar id="taskManagementToolbar">
+            <Title id="taskManagementToolbarTitle" text="{i18n>detailTaskManagementSectionTitle}" />
+            <ToolbarSpacer id="taskManagementToolbarSpacer" />
+            <Button id="btnAddTask" text="{i18n>btnAddTask}" type="Transparent" press="onAddTask" />
+            <Button id="btnUpdateTask" text="{i18n>btnUpdateTask}" type="Transparent" press="onUpdateTask" />
+            <Button id="btnDeleteTaskToolbar" icon="sap-icon://delete" type="Transparent" tooltip="{i18n>btnDeleteTask}" press="onDeleteTask" />
+            <Button id="btnSaveTask" text="{i18n>btnSaveProject}" type="Transparent" visible="{mProjectDetail>/tab/taskManagement/isEdit}" press="onSaveTask" />
+            <Button id="btnCancelTask" text="{i18n>btnCancelProject}" type="Transparent" visible="{mProjectDetail>/tab/taskManagement/isEdit}" press="onCancelTask" />
+        </Toolbar>
+        <Table id="taskManagementTable" items="{mProjectDetail>/tab/taskManagement/list}" mode="MultiSelect" noDataText="{i18n>projectListNoDataText}">
+            <columns>
+                <Column id="colTaskMgmtTitle"><Text id="colTaskMgmtTitleText" text="{i18n>taskTitleLabel}" /></Column>
+                <Column id="colTaskMgmtStatus"><Text id="colTaskMgmtStatusText" text="{i18n>taskStatusLabel}" /></Column>
+                <Column id="colTaskMgmtResponsible"><Text id="colTaskMgmtResponsibleText" text="{i18n>taskResponsibleLabel}" /></Column>
+                <Column id="colTaskMgmtStartDate"><Text id="colTaskMgmtStartDateText" text="{i18n>taskStartDateLabel}" /></Column>
+                <Column id="colTaskMgmtEndDate"><Text id="colTaskMgmtEndDateText" text="{i18n>taskEndDateLabel}" /></Column>
+            </columns>
+            <items>
+                <ColumnListItem id="taskManagementItem">
+                    <cells>
+                        <HBox id="taskMgmtTitleBox">
+                            <Input id="taskMgmtTitleInput" value="{mProjectDetail>title}" visible="{= !!${mProjectDetail>isEditable} }" />
+                            <Text id="taskMgmtTitle" text="{mProjectDetail>title}" visible="{= !${mProjectDetail>isEditable} }" />
+                        </HBox>
+                        <HBox id="taskMgmtStatusBox">
+                            <Select id="taskMgmtStatusSelect" selectedKey="{mProjectDetail>status}" visible="{= !!${mProjectDetail>isEditable} }">
+                                <core:Item id="taskMgmtStatusOpen" key="Open" text="{i18n>taskStatusOpen}" />
+                                <core:Item id="taskMgmtStatusInProgress" key="In Progress" text="{i18n>taskStatusInProgress}" />
+                                <core:Item id="taskMgmtStatusDone" key="Done" text="{i18n>taskStatusDone}" />
+                            </Select>
+                            <ObjectStatus
+                                id="taskMgmtStatus"
+                                text="{mProjectDetail>status}"
+                                state="{ path: 'mProjectDetail>status', formatter: '.formatter.formatTaskStatusState' }"
+                                visible="{= !${mProjectDetail>isEditable} }" />
+                        </HBox>
+                        <HBox id="taskMgmtResponsibleBox">
+                            <Select id="taskMgmtResponsibleSelect" items="{mProjectDetail>/owners}" selectedKey="{mProjectDetail>assignee_ID}" visible="{= !!${mProjectDetail>isEditable} }">
+                                <core:Item id="taskMgmtResponsibleItem" key="{mProjectDetail>ID}" text="{mProjectDetail>name}" />
+                            </Select>
+                            <Text id="taskMgmtResponsible" text="{mProjectDetail>assignee/name}" visible="{= !${mProjectDetail>isEditable} }" />
+                        </HBox>
+                        <HBox id="taskMgmtStartDateBox">
+                            <DatePicker
+                                id="taskMgmtStartDateInput"
+                                value="{mProjectDetail>startDate}"
+                                valueFormat="yyyy-MM-dd"
+                                displayFormat="MMM dd, yyyy"
+                                minDate="{ path: 'mProjectDetail>/data/startDate', formatter: '.formatter.formatToJSDate' }"
+                                maxDate="{ path: 'mProjectDetail>/data/endDate', formatter: '.formatter.formatToJSDate' }"
+                                visible="{= !!${mProjectDetail>isEditable} }" />
+                            <Text id="taskMgmtStartDate" text="{ path: 'mProjectDetail>startDate', formatter: '.formatter.formatDate' }" visible="{= !${mProjectDetail>isEditable} }" />
+                        </HBox>
+                        <HBox id="taskMgmtEndDateBox">
+                            <DatePicker
+                                id="taskMgmtEndDateInput"
+                                value="{mProjectDetail>endDate}"
+                                valueFormat="yyyy-MM-dd"
+                                displayFormat="MMM dd, yyyy"
+                                minDate="{ path: 'mProjectDetail>/data/startDate', formatter: '.formatter.formatToJSDate' }"
+                                maxDate="{ path: 'mProjectDetail>/data/endDate', formatter: '.formatter.formatToJSDate' }"
+                                visible="{= !!${mProjectDetail>isEditable} }" />
+                            <Text id="taskMgmtEndDate" text="{ path: 'mProjectDetail>endDate', formatter: '.formatter.formatDate' }" visible="{= !${mProjectDetail>isEditable} }" />
+                        </HBox>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </VBox>
+</core:FragmentDefinition>

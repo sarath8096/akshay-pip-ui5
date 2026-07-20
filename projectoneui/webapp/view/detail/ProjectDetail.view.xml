@@ -1,0 +1,176 @@
+<mvc:View controllerName="com.projectone.projectoneui.controller.detail.ProjectDetail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:m="sap.m"
+    xmlns="sap.uxap">
+    <m:Page id="detailPage" title="{i18n>detailPageTitle}" showNavButton="true" navButtonPress="onNavBack">
+    <ObjectPageLayout id="objectPage" showTitleInHeaderContent="true" useIconTabBar="true" upperCaseAnchorBar="false" navigate="onSectionNavigate">
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle id="detailHeaderTitle">
+                <expandedHeading>
+                    <m:Title id="expandedTitle" text="{mProjectDetail>/data/name}" />
+                </expandedHeading>
+                <snappedHeading>
+                    <m:Title id="snappedTitle" text="{mProjectDetail>/data/name}" />
+                </snappedHeading>
+                <expandedContent>
+                    <m:ObjectStatus
+                        id="expandedStatus"
+                        text="{mProjectDetail>/data/status}"
+                        state="{ path: 'mProjectDetail>/data/status', formatter: '.formatter.formatStatusState' }" />
+                </expandedContent>
+                <snappedContent>
+                    <m:ObjectStatus
+                        id="snappedStatus"
+                        text="{mProjectDetail>/data/status}"
+                        state="{ path: 'mProjectDetail>/data/status', formatter: '.formatter.formatStatusState' }" />
+                </snappedContent>
+                <actions>
+                    <m:Select
+                        id="sectionPicker"
+                        tooltip="{i18n>sectionPickerTooltip}"
+                        items="{mProjectDetail>/sectionOptions}"
+                        selectedKey="{mProjectDetail>/selectedSectionKey}"
+                        change="onSectionPick">
+                        <core:Item id="sectionPickerItem" key="{mProjectDetail>key}" text="{mProjectDetail>text}" />
+                    </m:Select>
+                </actions>
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
+
+        <headerContent>
+            <m:FlexBox id="headerAttributesBox" wrap="Wrap">
+                <m:VBox id="headerOwnerBox" class="sapUiMediumMarginEnd">
+                    <m:ObjectAttribute id="headerOwner" title="{i18n>columnOwner}" text="{mProjectDetail>/data/owner/name}" />
+                    <m:ObjectAttribute id="headerOwnerEmail" title="{i18n>columnOwnerEmail}" text="{mProjectDetail>/data/owner/email}" />
+                </m:VBox>
+                <m:VBox id="headerPriorityBox" class="sapUiMediumMarginEnd">
+                    <m:ObjectAttribute id="headerPriority" title="{i18n>columnPriority}" text="{mProjectDetail>/data/priority}" />
+                </m:VBox>
+                <m:VBox id="headerDatesBox" class="sapUiMediumMarginEnd">
+                    <m:ObjectAttribute id="headerStartDate" title="{i18n>columnStartDate}" text="{ path: 'mProjectDetail>/data/startDate', formatter: '.formatter.formatDate' }" />
+                    <m:ObjectAttribute id="headerEndDate" title="{i18n>columnEndDate}" text="{ path: 'mProjectDetail>/data/endDate', formatter: '.formatter.formatDate' }" />
+                </m:VBox>
+                <m:VBox id="headerProgressBox">
+                    <m:Label id="headerProgressLabel" text="{i18n>columnProgress}" />
+                    <m:ProgressIndicator
+                        id="headerProgress"
+                        width="12rem"
+                        percentValue="{mProjectDetail>/data/progress}"
+                        displayValue="{= ${mProjectDetail>/data/progress} + '%'}"
+                        state="{ path: 'mProjectDetail>/data/status', formatter: '.formatter.formatStatusState' }"
+                        showValue="true" />
+                </m:VBox>
+            </m:FlexBox>
+        </headerContent>
+
+        <sections>
+            <ObjectPageSection id="infoSection" title="{i18n>detailInfoPanelTitle}">
+                <subSections>
+                    <ObjectPageSubSection id="infoSubSection" title="{i18n>detailInfoPanelTitle}">
+                        <blocks>
+                            <m:VBox id="infoSectionBox">
+                                <m:Toolbar id="infoToolbar">
+                                    <m:Title id="infoToolbarTitle" text="{i18n>detailInfoPanelTitle}" />
+                                    <m:ToolbarSpacer id="infoToolbarSpacer" />
+                                    <m:Button
+                                        id="btnEditProject"
+                                        text="{i18n>btnEditProject}"
+                                        type="Transparent"
+                                        visible="{= !${mProjectDetail>/tab/info/isEdit} }"
+                                        press="onEditProject" />
+                                    <m:Button
+                                        id="btnSaveProject"
+                                        text="{i18n>btnSaveProject}"
+                                        type="Transparent"
+                                        visible="{mProjectDetail>/tab/info/isEdit}"
+                                        press="onSaveProject" />
+                                    <m:Button
+                                        id="btnCancelProject"
+                                        text="{i18n>btnCancelProject}"
+                                        type="Transparent"
+                                        visible="{mProjectDetail>/tab/info/isEdit}"
+                                        press="onCancelProject" />
+                                </m:Toolbar>
+                                <f:SimpleForm id="infoForm" editable="true" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" labelSpanS="12">
+                                    <m:Label id="labelShortDescriptionEdit" text="{i18n>detailShortDescriptionTitle}" visible="{mProjectDetail>/tab/info/isEdit}" />
+                                    <m:Input id="inputShortDescription" visible="{mProjectDetail>/tab/info/isEdit}" value="{mProjectDetail>/tab/info/editableFields/shortDescription}" />
+                                    <m:Label id="labelShortDescription" text="{i18n>detailShortDescriptionTitle}" visible="{= !${mProjectDetail>/tab/info/isEdit} }" />
+                                    <m:Text id="textShortDescription" visible="{= !${mProjectDetail>/tab/info/isEdit} }" text="{mProjectDetail>/data/shortDescription}" />
+
+                                    <m:Label id="labelLongDescriptionEdit" text="{i18n>detailLongDescriptionTitle}" visible="{mProjectDetail>/tab/info/isEdit}" />
+                                    <m:TextArea id="inputLongDescription" visible="{mProjectDetail>/tab/info/isEdit}" rows="4" value="{mProjectDetail>/tab/info/editableFields/longDescription}" />
+                                    <m:Label id="labelLongDescription" text="{i18n>detailLongDescriptionTitle}" visible="{= !${mProjectDetail>/tab/info/isEdit} }" />
+                                    <m:Text id="textLongDescription" visible="{= !${mProjectDetail>/tab/info/isEdit} }" text="{mProjectDetail>/data/longDescription}" />
+
+                                    <m:Label id="labelStartDateEdit" text="{i18n>columnStartDate}" visible="{mProjectDetail>/tab/info/isEdit}" />
+                                    <m:DatePicker id="inputStartDate" visible="{mProjectDetail>/tab/info/isEdit}" valueFormat="yyyy-MM-dd" displayFormat="MMM dd, yyyy" value="{mProjectDetail>/tab/info/editableFields/startDate}" />
+                                    <m:Label id="labelStartDate" text="{i18n>columnStartDate}" visible="{= !${mProjectDetail>/tab/info/isEdit} }" />
+                                    <m:Text id="textStartDate" visible="{= !${mProjectDetail>/tab/info/isEdit} }" text="{ path: 'mProjectDetail>/data/startDate', formatter: '.formatter.formatDate' }" />
+
+                                    <m:Label id="labelEndDateEdit" text="{i18n>columnEndDate}" visible="{mProjectDetail>/tab/info/isEdit}" />
+                                    <m:DatePicker id="inputEndDate" visible="{mProjectDetail>/tab/info/isEdit}" valueFormat="yyyy-MM-dd" displayFormat="MMM dd, yyyy" value="{mProjectDetail>/tab/info/editableFields/endDate}" />
+                                    <m:Label id="labelEndDate" text="{i18n>columnEndDate}" visible="{= !${mProjectDetail>/tab/info/isEdit} }" />
+                                    <m:Text id="textEndDate" visible="{= !${mProjectDetail>/tab/info/isEdit} }" text="{ path: 'mProjectDetail>/data/endDate', formatter: '.formatter.formatDate' }" />
+                                </f:SimpleForm>
+                            </m:VBox>
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection id="statsSubSection" title="{i18n>statsSectionTitle}">
+                        <blocks>
+                            <m:HBox id="statsBox" wrap="Wrap">
+                                <m:VBox id="statsTotalBox" class="sapUiMediumMarginEnd">
+                                    <m:Label id="statsTotalLabel" text="{i18n>statsTotalTasksLabel}" />
+                                    <m:ObjectNumber id="statsTotalValue" number="{mProjectDetail>/stats/total}" />
+                                </m:VBox>
+                                <m:VBox id="statsDoneBox" class="sapUiMediumMarginEnd">
+                                    <m:Label id="statsDoneLabel" text="{i18n>statsDoneTasksLabel}" />
+                                    <m:ObjectNumber id="statsDoneValue" number="{mProjectDetail>/stats/done}" state="Success" />
+                                </m:VBox>
+                                <m:VBox id="statsOpenBox" class="sapUiMediumMarginEnd">
+                                    <m:Label id="statsOpenLabel" text="{i18n>statsOpenTasksLabel}" />
+                                    <m:ObjectNumber id="statsOpenValue" number="{mProjectDetail>/stats/open}" />
+                                </m:VBox>
+                                <m:VBox id="statsInProgressBox" class="sapUiMediumMarginEnd">
+                                    <m:Label id="statsInProgressLabel" text="{i18n>statsInProgressTasksLabel}" />
+                                    <m:ObjectNumber id="statsInProgressValue" number="{mProjectDetail>/stats/inProgress}" state="Warning" />
+                                </m:VBox>
+                                <m:VBox id="statsCompletionBox">
+                                    <m:Label id="statsCompletionLabel" text="{i18n>statsCompletionLabel}" />
+                                    <m:ProgressIndicator
+                                        id="statsCompletionIndicator"
+                                        width="12rem"
+                                        percentValue="{mProjectDetail>/stats/completionPercent}"
+                                        displayValue="{= ${mProjectDetail>/stats/completionPercent} + '%'}"
+                                        showValue="true" />
+                                </m:VBox>
+                            </m:HBox>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+
+            <ObjectPageSection id="tasksSection" title="{i18n>detailTasksSectionTitle}">
+                <subSections>
+                    <ObjectPageSubSection id="tasksSubSection">
+                        <blocks>
+                            <core:Fragment fragmentName="com.projectone.projectoneui.view.fragment.TasksSection" type="XML" />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+
+            <ObjectPageSection id="taskManagementSection" title="{i18n>detailTaskManagementSectionTitle}">
+                <subSections>
+                    <ObjectPageSubSection id="taskManagementSubSection">
+                        <blocks>
+                            <core:Fragment fragmentName="com.projectone.projectoneui.view.fragment.TaskManagementSection" type="XML" />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+    </ObjectPageLayout>
+    </m:Page>
+</mvc:View>
