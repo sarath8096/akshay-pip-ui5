@@ -9,27 +9,27 @@
                 id="btnEditTasks"
                 text="{i18n>btnEditProject}"
                 type="Transparent"
-                visible="{= !${mProjectDetail>/tab/taskManagement/isEdit} }"
-                press="onUpdateTask" />
+                visible="{= !${mProjectDetail>/tab/tasks/isEdit} }"
+                press="onEditTasks" />
             <Button
                 id="btnSaveTasks"
                 text="{i18n>btnSaveProject}"
                 type="Transparent"
-                visible="{mProjectDetail>/tab/taskManagement/isEdit}"
-                press="onSaveTask" />
+                visible="{mProjectDetail>/tab/tasks/isEdit}"
+                press="onSaveTasks" />
             <Button
                 id="btnCancelTasks"
                 text="{i18n>btnCancelProject}"
                 type="Transparent"
-                visible="{mProjectDetail>/tab/taskManagement/isEdit}"
-                press="onCancelTask" />
+                visible="{mProjectDetail>/tab/tasks/isEdit}"
+                press="onCancelTasks" />
         </Toolbar>
-        <List id="tasksList" items="{mProjectDetail>/tab/taskManagement/list}" noDataText="{i18n>projectListNoDataText}">
+        <List id="tasksList" items="{mProjectDetail>/tab/tasks/list}" noDataText="{i18n>projectListNoDataText}">
             <CustomListItem id="taskItem">
                 <HBox id="taskItemBox" justifyContent="SpaceBetween" alignItems="Center" class="sapUiSmallMargin">
                     <VBox id="taskInfoBox">
                         <Text id="taskAssigneeText" text="{mProjectDetail>assignee/name}" visible="{= !${mProjectDetail>isEditable} }" />
-                        <Select id="taskAssigneeSelect" items="{mProjectDetail>/tab/taskManagement/owners}" selectedKey="{mProjectDetail>assignee_ID}" visible="{= !!${mProjectDetail>isEditable} }">
+                        <Select id="taskAssigneeSelect" items="{mProjectDetail>/owners}" selectedKey="{mProjectDetail>assignee_ID}" visible="{= !!${mProjectDetail>isEditable} }">
                             <core:Item id="taskAssigneeItem" key="{mProjectDetail>ID}" text="{mProjectDetail>name}" />
                         </Select>
                     </VBox>

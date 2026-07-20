@@ -7,6 +7,8 @@
             items="{project>/ProjectsList}"
             noDataText="{i18n>projectListNoDataText}"
             growing="true"
+            growingScrollToLoad="true"
+            growingThreshold="20"
             sticky="HeaderToolbar,ColumnHeaders">
             <headerToolbar>
                 <Toolbar id="tableHeaderToolbar">

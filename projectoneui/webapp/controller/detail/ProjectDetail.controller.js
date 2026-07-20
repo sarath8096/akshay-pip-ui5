@@ -27,15 +27,26 @@ sap.ui.define([
                     { "key": "tasksSection", "text": this._oi18n.getText("detailTasksSectionTitle") },
                     { "key": "taskManagementSection", "text": this._oi18n.getText("detailTaskManagementSectionTitle") }
                 ],
+                "owners": [],
+                "stats": {
+                    "total": 0,
+                    "done": 0,
+                    "open": 0,
+                    "inProgress": 0,
+                    "completionPercent": 0
+                },
                 "tab": {
                     "info": {
                         "isEdit": false,
                         "editableFields": { "shortDescription": "", "longDescription": "", "startDate": null, "endDate": null }
                     },
+                    "tasks": {
+                        "isEdit": false,
+                        "list": []
+                    },
                     "taskManagement": {
                         "isEdit": false,
-                        "list": [],
-                        "owners": []
+                        "list": []
                     }
                 }
             };
@@ -57,6 +68,8 @@ sap.ui.define([
 
             this.dataSource.getProject(sProjectId, function (oProjectData) {
                 oProjectDetailModel.setProperty("/data", oProjectData);
+                oProjectDetailModel.setProperty("/stats", that.fnComputeTaskStats(oProjectData.tasks));
+                oProjectDetailModel.setProperty("/tab/tasks/list", that.fnBuildTaskList(oProjectData.tasks));
                 oProjectDetailModel.setProperty("/tab/taskManagement/list", that.fnBuildTaskList(oProjectData.tasks));
             }, function (oError) {
                 that.fnMessageShow("E", that._oi18n.getText("errorLoadProject"));
@@ -74,7 +87,7 @@ sap.ui.define([
                 var oUnassignedOwner = { "ID": "", "name": "" };
                 var aOwnerOptions = [oUnassignedOwner].concat(aOwners);
 
-                oProjectDetailModel.setProperty("/tab/taskManagement/owners", aOwnerOptions);
+                oProjectDetailModel.setProperty("/owners", aOwnerOptions);
             }, function () {
                 that.fnMessageShow("E", that._oi18n.getText("errorLoadOwners"));
             });
@@ -91,6 +104,32 @@ sap.ui.define([
                 oClone.assignee_ID = oClone.assignee ? oClone.assignee.ID : null;
                 return oClone;
             });
+        },
+
+        /**
+         * Computes task counts and completion percentage for the Info tab summary
+         * @param {Array} aTasks
+         * @returns {Object}
+         */
+        fnComputeTaskStats(aTasks) {
+            var aList = aTasks || [];
+            var iTotal = aList.length;
+            var iDone = aList.filter(function (oTask) {
+                return oTask.status === "Done";
+            }).length;
+            var iInProgress = aList.filter(function (oTask) {
+                return oTask.status === "In Progress";
+            }).length;
+            var iOpen = iTotal - iDone - iInProgress;
+            var iCompletionPercent = iTotal ? Math.round((iDone / iTotal) * 100) : 0;
+
+            return {
+                "total": iTotal,
+                "done": iDone,
+                "open": iOpen,
+                "inProgress": iInProgress,
+                "completionPercent": iCompletionPercent
+            };
         },
 
         /**
@@ -183,6 +222,44 @@ sap.ui.define([
         },
 
         /**
+         * Marks every task row as editable in the Tasks tab, independent of Task Management's edit state
+         */
+        onEditTasks() {
+            var oProjectDetailModel = this.getView().getModel("mProjectDetail");
+            var aList = oProjectDetailModel.getProperty("/tab/tasks/list") || [];
+
+            aList.forEach(function (oTask) {
+                oTask.isEditable = true;
+            });
+
+            oProjectDetailModel.setProperty("/tab/tasks/list", aList);
+            oProjectDetailModel.setProperty("/tab/tasks/isEdit", true);
+        },
+
+        /**
+         * Persists the Tasks tab's edits and exits edit mode
+         */
+        onSaveTasks() {
+            var oProjectDetailModel = this.getView().getModel("mProjectDetail");
+            var aList = oProjectDetailModel.getProperty("/tab/tasks/list") || [];
+
+            this.fnPersistTaskList(aList, "taskSaveSuccess", "taskSaveError", function () {
+                oProjectDetailModel.setProperty("/tab/tasks/isEdit", false);
+            });
+        },
+
+        /**
+         * Resets the Tasks tab list to the live project's tasks and exits edit mode
+         */
+        onCancelTasks() {
+            var oProjectDetailModel = this.getView().getModel("mProjectDetail");
+            var aLiveTasks = oProjectDetailModel.getProperty("/data/tasks") || [];
+
+            oProjectDetailModel.setProperty("/tab/tasks/list", this.fnBuildTaskList(aLiveTasks));
+            oProjectDetailModel.setProperty("/tab/tasks/isEdit", false);
+        },
+
+        /**
          * Appends a new empty editable task row
          */
         onAddTask() {
@@ -239,7 +316,7 @@ sap.ui.define([
                 oProjectDetailModel.setProperty("/tab/taskManagement/list", aList);
 
                 if (!oProjectDetailModel.getProperty("/tab/taskManagement/isEdit")) {
-                    that.fnPersistTaskList("taskDeleteSuccess", "taskDeleteError");
+                    that.fnPersistTaskList(aList, "taskDeleteSuccess", "taskDeleteError");
                 }
             };
 
@@ -278,23 +355,23 @@ sap.ui.define([
                 return;
             }
 
-            this.fnPersistTaskList("taskSaveSuccess", "taskSaveError", function () {
+            this.fnPersistTaskList(aList, "taskSaveSuccess", "taskSaveError", function () {
                 oProjectDetailModel.setProperty("/tab/taskManagement/isEdit", false);
             });
         },
 
         /**
          * Sends the full task list as one deep update; rows omitted from it get deleted server side
+         * @param {Array} aList
          * @param {string} sSuccessTextKey
          * @param {string} sErrorTextKey
          * @param {Function} [fnDone]
          */
-        fnPersistTaskList(sSuccessTextKey, sErrorTextKey, fnDone) {
+        fnPersistTaskList(aList, sSuccessTextKey, sErrorTextKey, fnDone) {
             var that = this;
             var oProjectDetailModel = this.getView().getModel("mProjectDetail");
             var sProjectId = oProjectDetailModel.getProperty("/data/ID");
-            var aList = oProjectDetailModel.getProperty("/tab/taskManagement/list") || [];
-            var aPayloadTasks = aList.map(this.fnMapTaskForPayload);
+            var aPayloadTasks = (aList || []).map(this.fnMapTaskForPayload);
 
             this.busyDialog.open();
 

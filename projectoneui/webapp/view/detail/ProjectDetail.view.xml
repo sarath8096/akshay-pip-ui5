@@ -68,7 +68,7 @@
         <sections>
             <ObjectPageSection id="infoSection" title="{i18n>detailInfoPanelTitle}">
                 <subSections>
-                    <ObjectPageSubSection id="infoSubSection">
+                    <ObjectPageSubSection id="infoSubSection" title="{i18n>detailInfoPanelTitle}">
                         <blocks>
                             <m:VBox id="infoSectionBox">
                                 <m:Toolbar id="infoToolbar">
@@ -115,6 +115,37 @@
                                     <m:Text id="textEndDate" visible="{= !${mProjectDetail>/tab/info/isEdit} }" text="{ path: 'mProjectDetail>/data/endDate', formatter: '.formatter.formatDate' }" />
                                 </f:SimpleForm>
                             </m:VBox>
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection id="statsSubSection" title="{i18n>statsSectionTitle}">
+                        <blocks>
+                            <m:HBox id="statsBox" wrap="Wrap">
+                                <m:VBox id="statsTotalBox" class="sapUiMediumMarginEnd">
+                                    <m:Label id="statsTotalLabel" text="{i18n>statsTotalTasksLabel}" />
+                                    <m:ObjectNumber id="statsTotalValue" number="{mProjectDetail>/stats/total}" />
+                                </m:VBox>
+                                <m:VBox id="statsDoneBox" class="sapUiMediumMarginEnd">
+                                    <m:Label id="statsDoneLabel" text="{i18n>statsDoneTasksLabel}" />
+                                    <m:ObjectNumber id="statsDoneValue" number="{mProjectDetail>/stats/done}" state="Success" />
+                                </m:VBox>
+                                <m:VBox id="statsOpenBox" class="sapUiMediumMarginEnd">
+                                    <m:Label id="statsOpenLabel" text="{i18n>statsOpenTasksLabel}" />
+                                    <m:ObjectNumber id="statsOpenValue" number="{mProjectDetail>/stats/open}" />
+                                </m:VBox>
+                                <m:VBox id="statsInProgressBox" class="sapUiMediumMarginEnd">
+                                    <m:Label id="statsInProgressLabel" text="{i18n>statsInProgressTasksLabel}" />
+                                    <m:ObjectNumber id="statsInProgressValue" number="{mProjectDetail>/stats/inProgress}" state="Warning" />
+                                </m:VBox>
+                                <m:VBox id="statsCompletionBox">
+                                    <m:Label id="statsCompletionLabel" text="{i18n>statsCompletionLabel}" />
+                                    <m:ProgressIndicator
+                                        id="statsCompletionIndicator"
+                                        width="12rem"
+                                        percentValue="{mProjectDetail>/stats/completionPercent}"
+                                        displayValue="{= ${mProjectDetail>/stats/completionPercent} + '%'}"
+                                        showValue="true" />
+                                </m:VBox>
+                            </m:HBox>
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>

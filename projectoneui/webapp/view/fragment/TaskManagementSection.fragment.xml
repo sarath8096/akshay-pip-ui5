@@ -39,7 +39,7 @@
                                 visible="{= !${mProjectDetail>isEditable} }" />
                         </HBox>
                         <HBox id="taskMgmtResponsibleBox">
-                            <Select id="taskMgmtResponsibleSelect" items="{mProjectDetail>/tab/taskManagement/owners}" selectedKey="{mProjectDetail>assignee_ID}" visible="{= !!${mProjectDetail>isEditable} }">
+                            <Select id="taskMgmtResponsibleSelect" items="{mProjectDetail>/owners}" selectedKey="{mProjectDetail>assignee_ID}" visible="{= !!${mProjectDetail>isEditable} }">
                                 <core:Item id="taskMgmtResponsibleItem" key="{mProjectDetail>ID}" text="{mProjectDetail>name}" />
                             </Select>
                             <Text id="taskMgmtResponsible" text="{mProjectDetail>assignee/name}" visible="{= !${mProjectDetail>isEditable} }" />
